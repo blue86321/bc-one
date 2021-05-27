@@ -1,0 +1,10 @@
+.headline-event-wrapper{
+    height: calc(100vh - 70px);
+    min-height: 540px;
+    background-color: #bfa;
+    overflow: hidden;
+}
+
+.headline-video{
+    width: 100%;
+}
