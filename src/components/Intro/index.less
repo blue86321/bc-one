@@ -1,0 +1,26 @@
+@import '../../../../common/css/theme';
+
+.intro{
+    background-color: @dark-theme-bg-color;
+    width: 100%;
+    overflow: hidden;  // enable BFC
+
+    .content-wrapper{
+
+        width: 50%;
+        margin: 32px auto;
+
+        p:first-child{
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: 500;
+        }
+    
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            padding-top: 16px;
+        }
+    }
+}

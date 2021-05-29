@@ -1,0 +1,44 @@
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme a,
+.dark-theme p {
+  color: #fff;
+  font-weight: bold;
+}
+.light-theme a,
+.light-theme div,
+.light-theme p {
+  color: #737477;
+}
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+  color: #1a1919;
+}
+.intro {
+  background-color: #00162b;
+  width: 100%;
+  overflow: hidden;
+}
+.intro .content-wrapper {
+  width: 50%;
+  margin: 32px auto;
+}
+.intro .content-wrapper p:first-child {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 500;
+}
+.intro .content-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  padding-top: 16px;
+}

@@ -1,10 +1,95 @@
-.headline-event-wrapper{
-    height: calc(100vh - 70px);
-    min-height: 540px;
-    background-color: #bfa;
-    overflow: hidden;
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme a,
+.dark-theme p {
+  color: #fff;
+  font-weight: bold;
 }
-
-.headline-video{
-    width: 100%;
+.light-theme a,
+.light-theme div,
+.light-theme p {
+  color: #737477;
+}
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+  color: #1a1919;
+}
+.headline-event-wrapper {
+  height: calc(100vh - 70px);
+  min-height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+.headline-event-wrapper .headline-video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -999;
+}
+.headline-event-wrapper .event-info-wrapper {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+.headline-event-wrapper .event-info-wrapper .logo {
+  margin-top: 140px;
+  width: 16%;
+}
+.headline-event-wrapper .event-info-wrapper h2 {
+  font-size: 4em;
+  margin: 32px 0;
+}
+.headline-event-wrapper .event-info-wrapper .event-btns {
+  margin-top: 64px;
+}
+.headline-event-wrapper .event-info-wrapper .event-btns li {
+  float: left;
+  margin: 0 10px;
+}
+.headline-event-wrapper .event-info-wrapper .event-btns li:first-child {
+  margin-left: 0px;
+}
+.headline-event-wrapper .event-info-wrapper a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 0 2.5em;
+  line-height: 44px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 2px solid #fad50a;
+  text-decoration: none;
+  cursor: pointer;
+}
+.headline-event-wrapper .event-info-wrapper a:hover {
+  background-color: #fff;
+  color: #00162b;
+  transition: all 0.3s ease;
+}
+.headline-event-wrapper .event-info-wrapper .material-icons {
+  position: absolute;
+  left: 10px;
+}
+.headline-event-wrapper .event-info-wrapper a:hover .material-icons {
+  color: #a0a1a1;
+  transition: all 0.3s ease;
+}
+.headline-event-wrapper .event-info-wrapper li:first-child a {
+  background-color: #fad50a;
+  color: #00162b;
+}
+.headline-event-wrapper .event-info-wrapper li:first-child a {
+  background-color: #fad50a;
 }

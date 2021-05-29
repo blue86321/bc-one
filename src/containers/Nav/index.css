@@ -1,0 +1,53 @@
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme a,
+.dark-theme p {
+  color: #fff;
+  font-weight: bold;
+}
+.light-theme a,
+.light-theme div,
+.light-theme p {
+  color: #737477;
+}
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+  color: #1a1919;
+}
+.nav-wrapper {
+  background-color: #00162b;
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 600px;
+  line-height: 42px;
+  margin: 28px auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 22, 43, 0.4);
+  backdrop-filter: blur(6px);
+  background-color: transparent;
+  border-radius: 22px;
+}
+nav .nav-tab {
+  margin: -1px 0;
+  color: #fff;
+  font-weight: bold;
+}
+nav .active,
+nav .nav-tab:hover {
+  border-bottom: 2px solid #db0a40;
+}
+.nav-sticky {
+  position: fixed;
+  top: 12px;
+}
