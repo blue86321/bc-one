@@ -1,4 +1,4 @@
-@import '../../common/css/theme';
+@import '../../common/css/theme.less';
 
 .headline-event-wrapper{
     height: calc(100vh - 70px);
@@ -14,7 +14,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: -999;
+        opacity: 0;
+    }
+
+    // fade in effect
+    .video-fade-in{
+        opacity: 1;
+        transition: all .5s;
     }
 
     // event info
@@ -66,7 +72,7 @@
         a:hover{
             background-color: #fff;
             color: #00162b;
-            transition: all .3s ease;
+            transition: all .3s;
         }
 
         .material-icons{
@@ -76,7 +82,7 @@
 
         a:hover .material-icons{
             color: #a0a1a1;
-            transition: all .3s ease;
+            transition: all .3s;
         }
 
         li:first-child a{

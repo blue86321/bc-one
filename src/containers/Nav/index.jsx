@@ -6,13 +6,28 @@ import Info from '../../pages/Info'
 
 class Nav extends Component {
 
-    // TODO: nav-sticky 等待 JS 实现
+    state = {
+        stickyNav : false
+    }
+
+    componentDidMount(){
+        // sticky-nav
+        const stikyNavTopMargin = 12;
+        const stickyTriggerLimit = this.nav.offsetTop - stikyNavTopMargin
+        window.addEventListener("scroll", () => {
+            if(window.pageYOffset > stickyTriggerLimit){
+                this.setState({stickyNav : true})
+            } else {
+                this.setState({stickyNav : false})
+            }
+        })
+    }
     
     render() {
         return (
             <div>
                 <div className="nav-wrapper dark-theme">
-                    <nav>
+                    <nav className={this.state.stickyNav ? "sticky-nav" : ""} ref={ c => this.nav = c} >
                         <NavLink className="nav-tab" to="/">Info</NavLink>
                         <NavLink className="nav-tab" to="/bc-one-all-star">Breakers</NavLink>
                         <NavLink className="nav-tab" to="/bc-one-videos">Videos</NavLink>

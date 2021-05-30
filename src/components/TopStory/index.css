@@ -1,0 +1,109 @@
+.dark-theme {
+  background-color: #00162b;
+}
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme a,
+.dark-theme p {
+  color: #fff;
+  font-weight: bold;
+}
+.light-theme {
+  background-color: #f8f8f8;
+}
+.light-theme a,
+.light-theme p {
+  color: #737477;
+}
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+  color: #1a1919;
+  font-weight: bold;
+}
+.theme-btn {
+  border: 2px solid #fad50a;
+  background-color: #fad50a;
+  height: 48px;
+  min-width: 200px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 20px;
+  cursor: pointer;
+  color: inherit;
+}
+.theme-btn:hover {
+  background-color: #fff;
+  transition: all 0.2s;
+}
+.top-story-wrapper {
+  overflow: hidden;
+}
+.top-story {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  width: 1222px;
+  margin: 50px auto;
+  max-height: 540px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 16px 32px 0 rgba(0, 15, 30, 0.2);
+  overflow: hidden;
+}
+.top-story .top-story-img-wrapper {
+  width: 100%;
+  padding: 36px;
+  padding-bottom: 50%;
+}
+.top-story .top-story-img-wrapper img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  border-radius: 8px;
+}
+.top-story .story-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  padding: 36px;
+}
+.top-story .story-content .title {
+  font-size: 36px;
+  line-height: 44px;
+}
+.top-story .story-content .desc {
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 20px;
+}
+.top-story .story-content .top-story-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-story .story-content .top-story-footer .tag {
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+}
+.top-story .story-content .top-story-footer .read-btn {
+  color: #fff;
+}
+.top-story .story-content .top-story-footer .read-btn:hover {
+  color: #1a1919;
+}

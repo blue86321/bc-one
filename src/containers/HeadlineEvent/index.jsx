@@ -7,11 +7,24 @@ import Icon from '@material-ui/core/Icon';
 
 class HeadlineEvent extends Component {
     
+    state = {
+        videoLoaded : false
+    }
+
+    componentDidMount(){
+
+        // video fade in effect
+        if (this.video){
+            this.video.addEventListener("loadeddata", () => {
+                this.setState({videoLoaded : true})
+            })
+        }
+    }
     
     render() {
         return (
             <div className="headline-event-wrapper dark-theme">
-                <video autoPlay muted loop className="headline-video">
+                <video ref={c => this.video = c} autoPlay muted loop className={this.state.videoLoaded ? "headline-video video-fade-in" : "headline-video"}>
                     <source src={headlineVideo} type="video/mp4" />
                 </video>
 

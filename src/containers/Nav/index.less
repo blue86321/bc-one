@@ -1,34 +1,39 @@
 @import '../../common/css/theme';
-@border-width:2px;
+@active-nav-border-width: 2px;
+@nav-height: 42px;
 
 .nav-wrapper{
-    background-color: @dark-theme-bg-color;
-    overflow: hidden;  // enable BFC, make bg-color cover to all range
+    padding: 28px 0;
+    height: @nav-height;
 }
 
 nav{
     display: flex;
     justify-content: space-evenly;
     width: 600px;
-    line-height: 42px;
-    margin: 28px auto;
+    margin: 0 auto;
+    line-height: @nav-height;
+    height: @nav-height;
+    box-sizing: border-box;
     border: 1px solid rgba(255,255,255,.1);
     background-color: rgba(0,22,43,.4);
     backdrop-filter: blur(6px);
-    background-color: transparent;
     border-radius: 22px;
+    z-index: 999;
 
     .nav-tab{
-        margin: -@border-width+1 0;
+        margin: -@active-nav-border-width+1 0;
         color: #fff;
         font-weight: bold;
     }
     .active, .nav-tab:hover{
-        border-bottom: @border-width solid #db0a40;
+        border-bottom: @active-nav-border-width solid #db0a40;
     }
 }
 
-.nav-sticky{
+.sticky-nav{
     position: fixed;
     top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
 }

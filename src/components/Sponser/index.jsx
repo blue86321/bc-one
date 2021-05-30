@@ -5,7 +5,7 @@ export default class Sponser extends Component {
         return (
             <div className="sponser-wrapper">
                 <h3>Visit Our International Partner</h3>
-                <a href="https://www.technics.com/global/home/sl1200/redbullbcone.html" target="_blank">
+                <a href="https://www.technics.com/global/home/sl1200/redbullbcone.html" rel="noreferrer" target="_blank">
                     <img src="" alt="sponser - Technics" />
                 </a>
             </div>

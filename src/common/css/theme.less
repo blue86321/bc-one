@@ -3,6 +3,7 @@
 @light-theme-bg-color: #f8f8f8;
 
 .dark-theme{
+    background-color: #00162b;
     h1, h2, h3, h4, h5, h6, a, p{
         color: #fff;
         font-weight: bold;
@@ -10,12 +11,34 @@
 }
 
 .light-theme{
+    background-color: #f8f8f8;
 
-    a, div, p {
+    a, p {
         color: #737477;
     }
 
     h1, h2, h3, h4, h5, h6{
         color: #1a1919;
+        font-weight: bold;
     }
+}
+
+.theme-btn{
+    border: 2px solid @button-theme-color;
+    background-color: @button-theme-color;
+    height: 48px;
+    min-width: 200px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 20px;
+    cursor: pointer;
+    color:inherit;
+}
+
+.theme-btn:hover{
+    background-color: #fff;
+    transition: all .2s;
 }

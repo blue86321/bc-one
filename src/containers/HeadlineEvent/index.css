@@ -1,3 +1,6 @@
+.dark-theme {
+  background-color: #00162b;
+}
 .dark-theme h1,
 .dark-theme h2,
 .dark-theme h3,
@@ -8,6 +11,9 @@
 .dark-theme p {
   color: #fff;
   font-weight: bold;
+}
+.light-theme {
+  background-color: #f8f8f8;
 }
 .light-theme a,
 .light-theme div,
@@ -21,6 +27,7 @@
 .light-theme h5,
 .light-theme h6 {
   color: #1a1919;
+  font-weight: bold;
 }
 .headline-event-wrapper {
   height: calc(100vh - 70px);
@@ -35,7 +42,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -999;
+  opacity: 0;
+}
+.headline-event-wrapper .video-fade-in {
+  opacity: 1;
+  transition: all 0.5s;
 }
 .headline-event-wrapper .event-info-wrapper {
   position: relative;
@@ -76,7 +87,7 @@
 .headline-event-wrapper .event-info-wrapper a:hover {
   background-color: #fff;
   color: #00162b;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 .headline-event-wrapper .event-info-wrapper .material-icons {
   position: absolute;
@@ -84,7 +95,7 @@
 }
 .headline-event-wrapper .event-info-wrapper a:hover .material-icons {
   color: #a0a1a1;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 .headline-event-wrapper .event-info-wrapper li:first-child a {
   background-color: #fad50a;

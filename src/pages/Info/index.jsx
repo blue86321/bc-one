@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Intro from '../../components/Intro'
-import Story from '../../containers/Story'
+import TopStory from '../../components/TopStory'
+import StoryRail from '../../containers/StoryRail'
 import Event from '../../containers/Event'
 import Shop from '../../components/Shop'
 import Sponser from '../../components/Sponser'
@@ -12,7 +13,8 @@ class Info extends Component {
         return (
             <div>
                 <Intro/>
-                <Story/>
+                <TopStory/>
+                <StoryRail/>
                 <Event/>
                 <Shop/>
                 <Sponser/>
