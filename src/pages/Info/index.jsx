@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Intro from '../../components/Intro'
 import TopStory from '../../components/TopStory'
-import StoryRail from '../../containers/StoryRail'
+import StorySlider from '../../containers/StorySlider'
 import Event from '../../containers/Event'
 import Shop from '../../components/Shop'
 import Sponser from '../../components/Sponser'
@@ -14,7 +14,7 @@ class Info extends Component {
             <div>
                 <Intro/>
                 <TopStory/>
-                <StoryRail/>
+                <StorySlider/>
                 <Event/>
                 <Shop/>
                 <Sponser/>

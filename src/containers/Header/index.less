@@ -1,14 +1,40 @@
 @import '../../common/css/theme.less';
 @header-text-height: 36px;
 
+.hover-bg(@w;@h;@border-radius){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(.8);  // with scale effect
+    width: @w;
+    height: @h;
+    border-radius: @border-radius;
+    background-color: rgba(255,255,255,.1);
+    opacity: 0;  // invisible until hover on it
+}
+
+.hover-bg-hover-effect(){
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .3s;
+}
+
  header.top-header{
     position:absolute;
     background-color: transparent;
     top: 16px;
     right: 16px;
     left: 24px;
-    
     z-index: 999;
+
+    // set (position: sticky) efeective range
+    &::after{
+        content: '';
+        display: block;
+        height: 200px;
+        width: 100%;
+    }
+
 
     .header-wrapper{
         position: sticky;
@@ -43,24 +69,13 @@
                         // svg color to css filter: https://codepen.io/sosuke/pen/Pjoqqp
                         filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(107%) contrast(105%);
                     }
-    
                     .hover-bg{
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%) scale(.8);
-                        width: 48px;
-                        height: 48px;
-                        border-radius: 50%;
-                        background-color: rgba(255,255,255,.1);
-                        opacity: 0;
+                        .hover-bg(@w:48px;@h:48px;@border-radius:50%);
                     }
-                }
-        
-                .menu:hover .hover-bg{
-                    opacity: 1;
-                    transform: translate(-50%, -50%) scale(1);
-                    transition: all .3s;
+
+                    &:hover .hover-bg{
+                        .hover-bg-hover-effect;
+                    }
                 }
         
                 .homepage-logo{
@@ -88,23 +103,13 @@
                         // svg color to css filter: https://codepen.io/sosuke/pen/Pjoqqp
                         filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(107%) contrast(105%);
                     }
-        
                     .hover-bg{
-                        position: absolute;
-                        left: 50%;
-                        transform: translate(-50%) scale(.8);
-                        width: 44px;
-                        height: 44px;
-                        border-radius: 50%;
-                        background-color: rgba(255,255,255,.1);
-                        opacity: 0;
+                        .hover-bg(@w:44px;@h:44px;@border-radius:50%);
                     }
-                }
-    
-                .icon-wrapper:hover .hover-bg{
-                    opacity: 1;
-                    transform: translate(-50%) scale(1);
-                    transition: all .3s;
+
+                    &:hover .hover-bg{
+                        .hover-bg-hover-effect;
+                    }
                 }
             }
         }
@@ -129,30 +134,14 @@
                     padding: 0 15px;  // a tag expand tag-wrapper, which is the width of hover-bg
     
                     .hover-bg{
-                        position: absolute;
-                        width: 100%;
-                        height: @header-text-height;
-                        border-radius: 22px;
-                        background-color: rgba(255,255,255,.1);
-                        opacity: 0;  // invisible until hover on it
-                        transform: scale(0.8);  // with scale effect
+                        .hover-bg(@w:100%;@h:@header-text-height;@border-radius:22px);
+                    }
+
+                    &:hover .hover-bg{
+                        .hover-bg-hover-effect;
                     }
                 }
-    
-                a:hover .hover-bg{
-                    opacity: 1;
-                    transform: scale(1);
-                    transition: all .3s;
-                }   
             }
         }
     }
-}
-
-// set (position: sticky) efeective range
-.top-header::after{
-    content: '';
-    display: block;
-    height: 200px;
-    width: 100%;
 }

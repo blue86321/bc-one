@@ -17,16 +17,17 @@ export default class TopStory extends Component {
 
         // // ajax data, need to open the proxy server (src/common/server/server.js)
         // const url = "http://localhost:5000/v3/api/graphql/v1/v3/feed/en-INT%3Een-INT/related-to/rrn:content:event-series:ae51bd1a-19d3-4050-ac35-837c734ea1bb"
-        // axios.get(url).then(res=>{
-        //     // console.log(res.data)
-        //     console.log(res.data)
-        //     console.log(typeof res.data)
-        //     const {title, standfirst:desc, tag} = res.data.data
+        // const params = {
+        //     "scoring":"featured",
+        //     "score.featured.localeMixing":"en-INT",
+        //     "score.featured.subType":"featured",
+        //     "disableUsageRestrictions":true,
+        //     "rb3Schema":"v1:hubHeroContent",
+        // }
+        // axios.get(url, {params}).then(res=>{
+        //     const {title, standfirst:desc, tag} = res.data["data"]
         //     this.setState({topStory:{title, desc, tag}})
         // })
-
-        // axios.get("http://localhost:5000/test").then(res=>console.log(res.data),reason=>console.log(reason))
-
     }
 
     render() {

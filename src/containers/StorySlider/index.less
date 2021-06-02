@@ -1,0 +1,35 @@
+@import '../../common/css/theme.less';
+
+.story-slider-wrapper{
+    padding: 100px 0;
+}
+
+
+// title, desc
+.section-info{
+
+    position: absolute;
+    left: 64px;  // TODO: responsive design
+    top: 0px;
+
+    .section-title{
+        position: relative;
+        font-size: 48px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 9px;
+            bottom: 9px;
+            width: 6px;
+            height: auto;
+            background-color: #db0a40;
+        }
+    }
+    
+    .section-desc{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

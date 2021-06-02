@@ -4,8 +4,8 @@ import {Route, Redirect, Switch, NavLink} from 'react-router-dom'
 import ExampleContainer from './containers/ExampleContainer'
 import HeadlineEvent from './containers/HeadlineEvent'
 import Header from './containers/Header'
-import Nav from './containers/Nav'
-import ContactInfo from './components/ContactInfo'
+import Content from './containers/Content'
+import SocialMedia from './components/SocialMedia'
 import Aside from './containers/Aside'
 import Footer from './components/Footer'
 
@@ -16,8 +16,8 @@ export default class App extends Component {
             <Fragment>
                 <Header/>
                 <HeadlineEvent/>
-                <Nav/>
-                <ContactInfo/>
+                <Content/>
+                <SocialMedia/>
                 <Aside/>
                 <Footer/>
 

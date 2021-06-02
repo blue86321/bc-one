@@ -1,0 +1,35 @@
+@import '../../common/css/theme.less';
+
+.event-wrapper{
+    height: 500px;  //
+    width: 100%;
+
+    .event-header{
+        display: flex;
+        align-items:flex-end;
+
+        h2{
+            font-size: 48px;
+        }
+
+        .event-tabs{
+            margin-left: 20px;
+
+            .tab{
+                margin: 0 10px;
+                background-color: transparent;
+                border: 0px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 1.5;
+                padding-bottom: 4px;
+            }
+
+            .active-tab{
+                .tab;
+                border-bottom: 4px solid #db0a40;
+            }
+        }
+    }
+}

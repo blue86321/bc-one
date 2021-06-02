@@ -26,6 +26,7 @@ class Nav extends Component {
     render() {
         return (
             <div>
+                {/* nav */}
                 <div className="nav-wrapper dark-theme">
                     <nav className={this.state.stickyNav ? "sticky-nav" : ""} ref={ c => this.nav = c} >
                         <NavLink className="nav-tab" to="/">Info</NavLink>
@@ -37,6 +38,7 @@ class Nav extends Component {
                     </nav>
                 </div>
 
+                {/* Content pages */}
                 <Switch>
                     <Route path="/" component={Info}/>
                     {/* component={...} */}

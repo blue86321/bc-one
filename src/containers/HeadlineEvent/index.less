@@ -44,54 +44,50 @@
         // btns
         .event-btns{
             margin-top: 64px;
-        }
 
-        .event-btns li {
-            float: left;
-            margin: 0 10px;
-        }
+            li {
+                float: left;
+                margin: 0 10px;
 
-        .event-btns li:first-child{
-            margin-left: 0px;
-        }
+                &:first-child{
+                    margin-left: 0px;
 
-        a{
-            position: relative;
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            padding: 0 2.5em;
-            line-height: 44px;
-            border-radius: 6px;
-            font-size: 14px;
-            border: 2px solid @button-theme-color;
-            text-decoration: none;
-            cursor: pointer;
-        }
+                    a{
+                        background-color: @button-theme-color;
+                        color: #00162b;
+                    }
+                }
 
-        a:hover{
-            background-color: #fff;
-            color: #00162b;
-            transition: all .3s;
-        }
-
-        .material-icons{
-            position: absolute;
-            left: 10px;
-        }
-
-        a:hover .material-icons{
-            color: #a0a1a1;
-            transition: all .3s;
-        }
-
-        li:first-child a{
-            background-color: @button-theme-color;
-            color: #00162b;
-        }
-
-        li:first-child a{
-            background-color: @button-theme-color;
+                a{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+                    padding: 0 2.5em;
+                    line-height: 44px;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    border: 2px solid @button-theme-color;
+                    text-decoration: none;
+                    cursor: pointer;
+        
+                    &:hover{
+                        background-color: #fff;
+                        color: #00162b;
+                        transition: all .3s;
+                    }
+        
+                    .material-icons{
+                        position: absolute;
+                        left: 10px;
+                    }
+        
+                    &:hover .material-icons{
+                        color: #a0a1a1;
+                        transition: all .3s;
+                    }
+                }
+            }
         }
     }
 }
