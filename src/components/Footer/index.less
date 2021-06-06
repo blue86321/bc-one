@@ -1,0 +1,47 @@
+@import '../../common/css/theme.less';
+
+.global-footer-wrapper{
+    .dark-theme;
+}
+
+.global-footer{
+    max-width: 1350px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 30px 50px 50px;
+    font-size: 14px;
+    display: flex;
+
+    .footer-copyright{
+        color: #a0a1a1;
+        padding-top: 20px;
+    }
+
+    .footer-copyright, .footer-nav, .footer-nav button{
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .footer-nav{
+        margin-left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        a, button{
+            padding: 20px 0 0 25px;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        button{
+            background-color: transparent;
+            border: 0px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

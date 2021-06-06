@@ -5,7 +5,7 @@
 @main-content-margin-left: calc(64px + (100% - 1350px)/2);
 
 
-.dark-theme{
+.dark-theme(){
     background-color: #00162b;
     h1, h2, h3, h4, h5, h6, a, p{
         color: #fff;
@@ -13,7 +13,7 @@
     }
 }
 
-.light-theme{
+.light-theme(){
     background-color: #f8f8f8;
 
     a, p {
@@ -26,7 +26,7 @@
     }
 }
 
-.theme-btn{
+.theme-btn(){
     border: 2px solid @button-theme-color;
     background-color: @button-theme-color;
     height: 48px;
@@ -38,10 +38,12 @@
     font-weight: bold;
     padding: 0 20px;
     cursor: pointer;
-    color:inherit;
-}
-
-.theme-btn:hover{
-    background-color: #fff;
+    color: #fff;
     transition: all .2s;
+    box-sizing: border-box;
+
+    &:hover{
+        background-color: #fff;
+        color: #1a1919;
+    }
 }

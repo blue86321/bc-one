@@ -10,7 +10,7 @@ import searchIcon from '../../common/images/search.svg'
 class Header extends Component {
     render() {
         return (
-            <header className="top-header dark-theme">
+            <header className="top-header">
                 <div className="header-wrapper">
                     {/* side bar (left and right) */}
                     <div className="side">

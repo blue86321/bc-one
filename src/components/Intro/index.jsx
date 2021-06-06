@@ -4,7 +4,7 @@ import './index.css'
 export default class Intro extends Component {
     render() {
         return (
-            <div className="intro dark-theme">
+            <div className="intro">
                 <div className="content-wrapper">
                     <p>Red Bull BC One is the biggest and most prestigious one-on-one breaking competition in the world.</p>
                     <p>Every year, thousands of breakers compete for a chance to represent at the Red Bull BC One World Final. 16 B-Boys and 16 B-Girls earn the right to enter an all-out battle on the Red Bull BC One stage, but only one will be crowned the champion.</p>

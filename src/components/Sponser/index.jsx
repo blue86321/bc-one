@@ -35,7 +35,7 @@ export default class Sponser extends Component {
 
     render() {
         return (
-            <div className="sponser-wrapper dark-theme">
+            <div className="sponser-wrapper">
                 <div className="sponser-container">
                     <h2>Visit Our International Partner</h2>
                     <div className="sponser-list">

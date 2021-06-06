@@ -1,6 +1,9 @@
 .slider-viewport {
   position: relative;
 }
+.slider-viewport:hover .nav-btn {
+  opacity: 1;
+}
 .slider-viewport .slider-container {
   position: relative;
   display: flex;
@@ -38,6 +41,18 @@
   border-bottom-left-radius: 8px;
   right: 0px;
 }
-.hover-show-slider-nav:hover .nav-btn {
-  opacity: 1;
+.process-bar-container {
+  width: 100%;
+  margin-top: 36px;
+  box-sizing: border-box;
+}
+.process-bar-container .process-bar {
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease-out;
+}
+.process-bar-container .process-bar-background {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
 }

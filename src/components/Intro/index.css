@@ -1,37 +1,18 @@
-.dark-theme {
-  background-color: #00162b;
-}
-.dark-theme h1,
-.dark-theme h2,
-.dark-theme h3,
-.dark-theme h4,
-.dark-theme h5,
-.dark-theme h6,
-.dark-theme a,
-.dark-theme p {
-  color: #fff;
-  font-weight: bold;
-}
-.light-theme {
-  background-color: #f8f8f8;
-}
-.light-theme a,
-.light-theme div,
-.light-theme p {
-  color: #737477;
-}
-.light-theme h1,
-.light-theme h2,
-.light-theme h3,
-.light-theme h4,
-.light-theme h5,
-.light-theme h6 {
-  color: #1a1919;
-  font-weight: bold;
-}
 .intro {
+  background-color: #00162b;
   width: 100%;
   overflow: hidden;
+}
+.intro h1,
+.intro h2,
+.intro h3,
+.intro h4,
+.intro h5,
+.intro h6,
+.intro a,
+.intro p {
+  color: #fff;
+  font-weight: bold;
 }
 .intro .content-wrapper {
   width: 50%;

@@ -38,7 +38,7 @@ export default class SocialMedia extends Component {
 
     render() {
         return (
-            <div className="social-media-wrapper dark-theme">
+            <div className="social-media-wrapper">
                 <h2>Want to see more Red Bull BC One?</h2>
                 
                 <div style={{backgroundImage:"url("+facebookIcon+")"}} />

@@ -23,10 +23,12 @@ class HeadlineEvent extends Component {
     
     render() {
         return (
-            <div className="headline-event-wrapper dark-theme">
-                <video ref={c => this.video = c} autoPlay muted loop className={this.state.videoLoaded ? "headline-video video-fade-in" : "headline-video"}>
-                    <source src={headlineVideo} type="video/mp4" />
-                </video>
+            <div className="headline-event-wrapper">
+                <div className="media-preview">
+                    <video ref={c => this.video = c} autoPlay muted loop className={this.state.videoLoaded ? "headline-video video-fade-in" : "headline-video"}>
+                        <source src={headlineVideo} type="video/mp4" />
+                    </video>
+                </div>
 
                 <div className="event-info-wrapper">
                     <img className="logo" src={beoneLogo} alt="bc-one-logo" />

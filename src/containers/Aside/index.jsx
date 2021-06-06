@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import './index.css'
+
 
 class Aside extends Component {
 
@@ -32,7 +35,7 @@ class Aside extends Component {
             <div className="aside-wrapper">
                 <h2>More like this</h2>
                 <div className="aside-cards"></div>
-                <button className="info-card-more-btn">Load more</button>
+                <button className="aside-more-btn"><MoreVertIcon style={{color:"#fff"}}/>Load more</button>
             </div>
         )
     }

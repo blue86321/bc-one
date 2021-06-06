@@ -1,62 +1,30 @@
-.dark-theme {
-  background-color: #00162b;
-}
-.dark-theme h1,
-.dark-theme h2,
-.dark-theme h3,
-.dark-theme h4,
-.dark-theme h5,
-.dark-theme h6,
-.dark-theme a,
-.dark-theme p {
-  color: #fff;
-  font-weight: bold;
-}
-.light-theme {
+.story-slider-wrapper {
   background-color: #f8f8f8;
+  padding: 100px 0;
 }
-.light-theme a,
-.light-theme p {
+.story-slider-wrapper a,
+.story-slider-wrapper p {
   color: #737477;
 }
-.light-theme h1,
-.light-theme h2,
-.light-theme h3,
-.light-theme h4,
-.light-theme h5,
-.light-theme h6 {
+.story-slider-wrapper h1,
+.story-slider-wrapper h2,
+.story-slider-wrapper h3,
+.story-slider-wrapper h4,
+.story-slider-wrapper h5,
+.story-slider-wrapper h6 {
   color: #1a1919;
   font-weight: bold;
 }
-.theme-btn {
-  border: 2px solid #fad50a;
-  background-color: #fad50a;
-  height: 48px;
-  min-width: 200px;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 0 20px;
-  cursor: pointer;
-  color: inherit;
-}
-.theme-btn:hover {
-  background-color: #fff;
-  transition: all 0.2s;
-}
-.story-slider-wrapper {
-  padding: 100px 0;
-}
 .section-info {
   position: absolute;
+  width: calc((99.99% + 24px)*0.41666667 - 24px);
   left: 64px;
   top: 0px;
 }
 .section-info .section-title {
   position: relative;
   font-size: 48px;
+  white-space: nowrap;
 }
 .section-info .section-title::before {
   content: '';
@@ -69,6 +37,8 @@
   background-color: #db0a40;
 }
 .section-info .section-desc {
+  padding-top: 12px;
   font-size: 16px;
   line-height: 24px;
+  color: #737477;
 }

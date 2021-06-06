@@ -33,7 +33,7 @@ export default class TopStory extends Component {
     render() {
         const {title, desc, tag} = this.state.topStory
         return (
-            <div className="top-story-wrapper light-theme">
+            <div className="top-story-wrapper">
                 <div className="top-story">
                     <div className="top-story-img-wrapper">
                         <img src={topStoryImg} alt="top-story" />
@@ -45,7 +45,7 @@ export default class TopStory extends Component {
                         </div>
                         <footer className="top-story-footer">
                             <div className="tag">{tag}</div>
-                            <button className="read-btn theme-btn">Read Story</button>
+                            <button className="read-btn">Read Story</button>
                         </footer>
                     </div>
                 </div>

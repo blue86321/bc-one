@@ -3,16 +3,20 @@ import './index.css'
 
 export default class StoryCard extends Component {
     render() {
-        const {id, img, title, desc, tag} = this.props
+        const {title,desc,tagText,imageURL,imgTitle,uriSlug} = this.props
+        const link = uriSlug && "https://www.redbull.com/int-en/" + uriSlug
+        const trimDesc = desc && desc.slice(0,100) + "…"
         return (
-            <div key={id} className="slider-item">
-                <img src={img} alt="story-item" />
-                <div className="story-info">
-                    <div className="title"><h3>{title}</h3></div>
-                    <p className="desc">{desc}</p>
-                    <footer className="tag">{tag}</footer>
+            <a href={link} className={link ? "slider-item" : "slider-item empty"}>
+                <div className="media-preview">
+                    {imageURL ? <img src={imageURL} alt title={imgTitle} /> : ""}
                 </div>
-            </div>
+                <div className="story-info">
+                    <div className="title">{title}</div>
+                    <p className="desc">{trimDesc}</p>
+                    <footer className="tag">{tagText}</footer>
+                </div>
+            </a>
         )
     }
 }

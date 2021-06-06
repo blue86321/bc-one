@@ -27,7 +27,7 @@ class Nav extends Component {
         return (
             <div>
                 {/* nav */}
-                <div className="nav-wrapper dark-theme">
+                <div className="nav-wrapper">
                     <nav className={this.state.stickyNav ? "sticky-nav" : ""} ref={ c => this.nav = c} >
                         <NavLink className="nav-tab" to="/">Info</NavLink>
                         <NavLink className="nav-tab" to="/bc-one-all-star">Breakers</NavLink>
