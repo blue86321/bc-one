@@ -135,6 +135,8 @@ export default class Winner extends Component {
                                         </div>
                                     </div>
                                 )
+                            } else {
+                                return ""
                             }
                         })
                     }

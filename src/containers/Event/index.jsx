@@ -18,20 +18,22 @@ class Event extends Component {
 
     // toggle active tab
     handleTab = (target) => {
-        [...this.tabs.children].map( element => {
+        const tabElements = [...this.tabs.children]
+        for (let i = 0; i < tabElements.length; i++) {
+            const element = tabElements[i];
             // simply set className
             if (element === target){
                 element.className = "active-tab"
                 this.setState({activeTab: element.innerHTML})
             } else{
                 element.className = "tab";
-            } 
+            }
 
             // add className
             // const classNameSet = new Set(element.className.split(" "));
             // element === target ? classNameSet.add("active-tab") : classNameSet.delete("active-tab")
             // element.className = [...classNameSet].join(" ");
-        })
+        }
     }
 
     getEvent = async (tag, url, params) => {
