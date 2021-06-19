@@ -1,4 +1,4 @@
-import React, { Component, cloneElement, isValidElement } from 'react'
+import React, { Component} from 'react'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import './index.css'
 
@@ -13,7 +13,6 @@ export default class ImageSliderProgress extends Component {
         showNavNext: true,
     }
 
-    // TODO: 1. hover showing (e.g. don't show Prev at zero)
     navPrev = () => {
         const currentOffset = parseInt(this.slider.style.transform.replace("translateX(", ""));
         const {cardWidth, curImgIndex, progressBarCurrentWidth, progressBarEaceOffset} = this.state;
@@ -50,18 +49,21 @@ export default class ImageSliderProgress extends Component {
         }
     }
 
-    // get child element (card) to calculate its width (for progressBarCurrentWidth)
-    getCard = (card, index) => {
-        const margin = parseInt(getComputedStyle(card)["margin-left"]) + parseInt(getComputedStyle(card)["margin-right"])
-        const totalWidth = parseInt(card.clientWidth) + margin        
-        this.state.cardWidth[index] = totalWidth;
-    }
+    componentDidUpdate(prevProps,prevState){
+        // calculate each card width (for progressBarCurrentWidth)
+        const cardWidth = [...this.slider.children].map( card => {
+            const margin = parseInt(getComputedStyle(card)["margin-left"]) + parseInt(getComputedStyle(card)["margin-right"])
+            const cardTotalWidth = parseInt(card.clientWidth) + margin
+            return cardTotalWidth
+        })
 
-    componentDidMount(){
-        this.setState({
-            progressBarEaceOffset: 100/this.props.children.length,
-            progressBarCurrentWidth: 100/this.props.children.length + "%",
-        });
+        if (prevState.cardWidth.length !== cardWidth.length){
+            this.setState({
+                cardWidth,
+                progressBarEaceOffset: 100/this.slider.children.length,
+                progressBarCurrentWidth: 100/this.slider.children.length + "%",
+            })
+        }
     }
 
 
@@ -72,9 +74,12 @@ export default class ImageSliderProgress extends Component {
         return (
             <div className="slider-progress-viewport" style={{...viewportStyle}}>
                 <div className="slider-container" ref={c => this.slider = c} style={{transform:"translateX(0px)",...containerStyle}}>
-                    {children.map(
+                    {
+                        children.map(item => item)
+                    }
+                    {/* {children.map(
                         (item,index) => isValidElement(item) ? cloneElement(item, {getCard:this.getCard, index}) : item
-                    )}
+                    )} */}
                 </div>
                 <button className="nav-btn previous" onClick={this.navPrev} style={showNavPrev ? {} : {opacity:0,pointerEvents:"none"}}><NavigateNextIcon style={{transform:"rotate(180deg)",color:"#fff"}}/></button>
                 <button className="nav-btn next" onClick={this.navNext} style={showNavNext ? {} : {opacity:0,pointerEvents:"none"}}><NavigateNextIcon style={{color:"#fff"}}/></button>

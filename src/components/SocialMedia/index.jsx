@@ -1,7 +1,5 @@
 import axios from 'axios'
 import React, { Component } from 'react'
-import TwitterIcon from '@material-ui/icons/Twitter';
-import facebookIcon from '../../common/images/facebookIcon.svg'
 import './index.css'
 
 
@@ -11,37 +9,44 @@ export default class SocialMedia extends Component {
         socialLink : [],
     }
 
-    componentDidMount(){
-        // // ajax
-        // const url = "http://localhost:5000/v3/api/graphql/v1/v3/query/en-INT";
-        // const params = {
-        //     "filter[type]" : "event-series",
-        //     "filter[uriSlug]" : "bc-one",
-        //     "sort" : "-startDate",
-        //     "page[limit]" : 1,
-        //     "rb3Schema" : "v1:socialFollow",
-        // }
-        // axios.get(url, {params}).then(res => {
-        //     const twitterHrefPrefix = "https://twitter.com/intent/follow?screen_name=";
-        //     const socialLinkArray = [];
-        //     res.data["data"]["buttons"].map(contact => {
-        //         const {platform} = contact
-        //         const href = contact.platform === "twitter" ? twitterHrefPrefix+contact.username : contact.href
-        //         this.setState({socialLink:[...this.state.socialLink, {platform, href}]})
-        //     })
-        // })
+    getSocialLink = async () => {
+        try {
+            const url = "http://localhost:5000/v3/api/graphql/v1/v3/query/en-INT";
+            const params = {
+                "filter[type]" : "event-series",
+                "filter[uriSlug]" : "bc-one",
+                "sort" : "-startDate",
+                "page[limit]" : 1,
+                "rb3Schema" : "v1:socialFollow",
+            }
+            const res = await axios.get(url, {params})
+            const twitterHrefPrefix = "https://twitter.com/intent/follow?screen_name=";
+            const socialLink = res.data["data"]["buttons"].map(contact => {
+                const {platform} = contact
+                const href = contact.platform === "twitter" ? twitterHrefPrefix+contact.username : contact.href
+                return {platform, href}
+            })
+            this.setState({socialLink})
+        } catch {
+            console.log("showing test data because not opening the proxy server.")
+            this.setState({
+                socialLink : [
+                    {"platform":"facebook","href":"https://www.facebook.com/redbullBCOne"},
+                    {"platform":"instagram","href":"https://www.instagram.com/redbullBCOne"},
+                    {"platform":"twitter","href":"https://twitter.com/intent/follow?screen_name=redbullBCOne"},
+                ],
+            })
+        }
+    }
 
-        const platform = "facebook"
-        const href = "https://www.facebook.com/redbullBCOne"
-        this.setState({socialLink:[...this.state.socialLink, {platform, href}]})
+    componentDidMount(){
+        this.getSocialLink()
     }
 
     render() {
         return (
             <div className="social-media-wrapper">
-                <h2>Want to see more Red Bull BC One?</h2>
-                
-                <div style={{backgroundImage:"url("+facebookIcon+")"}} />
+                <h2>Want to see more Red Bull BC One?</h2>                
                 <div className="social-media-links">
                     {
                         this.state.socialLink.map(social => (

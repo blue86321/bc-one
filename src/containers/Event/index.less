@@ -1,4 +1,4 @@
-@import '../../common/css/theme.less';
+@import '../../assets/css/theme.less';
 
 .event-wrapper{
     .light-theme;
@@ -18,24 +18,28 @@
             line-height: 40px;
         }
 
-        .event-tabs{
-            margin-left: 20px;
+    }    
+}
 
-            .tab{
-                margin: 0 10px;
-                background-color: transparent;
-                border: 0px;
-                cursor: pointer;
-                font-weight: bold;
-                font-size: 16px;
-                line-height: 1.5;
-                padding-bottom: 4px;
-            }
+.event-tabs{
+    margin-left: 20px;
 
-            .active-tab{
-                .tab;
-                border-bottom: 4px solid #db0a40;
-            }
-        }
+    .tab{
+        margin: 0 10px;
+        background-color: transparent;
+        border: 0px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 1.5;
+        padding-bottom: 4px;
+        color:#1a1919;
+        font-weight: 500;
+        opacity: .7;
+    }
+
+    .active-tab{
+        &:extend(.event-tabs .tab);
+        border-bottom: 4px solid #db0a40;
+        opacity: 1;
     }
 }

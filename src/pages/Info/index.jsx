@@ -2,23 +2,24 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Intro from '../../components/Intro'
 import TopStory from '../../components/TopStory'
-import StorySlider from '../../containers/StorySlider'
+import MoreStory from '../../containers/MoreStory'
 import Event from '../../containers/Event'
-import Shop from '../../components/Shop'
+import Shop from '../../containers/Shop'
 import Sponser from '../../components/Sponser'
-import EventGallery from '../../components/EventGallery'
+import EventSeriesGallery from '../../containers/EventSeriesGallery'
 
 class Info extends Component {
     render() {
         return (
-            <div>
+            <div className="info">
                 <Intro/>
                 <TopStory/>
-                <StorySlider/>
+                <MoreStory/>
                 <Event/>
                 <Shop/>
                 <Sponser/>
-                <EventGallery/>
+                
+                <EventSeriesGallery/>
             </div>
         )
     }

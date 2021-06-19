@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './index.css'
 
-import menu from '../../common/images/menu.svg'
-import logo from '../../common/images/redbullcom-logo.svg'
-import userLoginIcon from '../../common/images/user-login.svg'
-import searchIcon from '../../common/images/search.svg'
+import menu from '../../assets/images/menu.svg'
+import logo from '../../assets/images/redbullcom-logo.svg'
+import userLoginIcon from '../../assets/images/user-login.svg'
+import searchIcon from '../../assets/images/search.svg'
 
 class Header extends Component {
     render() {
@@ -18,9 +18,8 @@ class Header extends Component {
                         <div className="left">
                             <button className="menu">
                                 <img className="menu-icon" src={menu} alt="menu-icon" />
-                                <div className="hover-bg"></div>
                             </button>
-                            <a href="#">
+                            <a href="https://www.redbull.com/">
                                 <img className="homepage-logo" src={logo} alt="homepage-logo" />
                             </a>
                         </div>
@@ -28,11 +27,9 @@ class Header extends Component {
                         <div className="right">
                             <div className="icon-wrapper">
                                 <img className="user-login-icon" src={userLoginIcon} alt="user-login-icon" />
-                                <div className="hover-bg"></div>
                             </div>
                             <div className="icon-wrapper">
                                 <img className="search-icon" src={searchIcon} alt="search-icon" />
-                                <div className="hover-bg"></div>
                             </div>
 
                         </div>
@@ -40,12 +37,10 @@ class Header extends Component {
 
                     {/* mid header */}
                     <div className="mid">
-                        {/* a tag will expand tag-wrapper, which is the hover-bg width */}
-                        {/* because of tag-wrapper, a tag with padding will make hover-bg in the same position */}
-                        <div className="tag-wrapper"><a href="#"><div className="hover-bg"></div>TV</a></div>
-                        <div className="tag-wrapper"><a href="#"><div className="hover-bg"></div>Events</a></div>
-                        <div className="tag-wrapper"><a href="#"><div className="hover-bg"></div>Athletes</a></div>
-                        <div className="tag-wrapper"><a href="#"><div className="hover-bg"></div>Products</a></div>
+                        <a href="https://www.redbull.com/discover" rel="noreferrer">TV</a>
+                        <a href="https://www.redbull.com/events" rel="noreferrer">Events</a>
+                        <a href="https://www.redbull.com/athletes" rel="noreferrer">Athletes</a>
+                        <a href="https://www.redbull.com/energydrink" rel="noreferrer">Products</a>
                     </div>
                 </div>
             </header>

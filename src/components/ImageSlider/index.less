@@ -1,7 +1,8 @@
+@import '../../assets/css/theme.less';
 
 .slider-viewport{
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
 
     &:hover .nav-btn{
         opacity: 1;
@@ -10,7 +11,7 @@
     .slider-container{
         position: relative;
         display: flex;
-        max-width: 1350px;
+        max-width: @main-container-max-width;
         margin: 0 auto;
         padding: 0px;
         transition: transform .3s ease-out;
@@ -50,21 +51,23 @@
     }
 }
 
-.process-bar-container{
-    width: 100%;
-    margin-top: 36px;
-    box-sizing: border-box;
+.card-wrapper{
+    flex: 0 0 auto;
+    margin-right: 24px;
 
-    .process-bar{
-        height: 1px;
-        background: #fff;
-        transition: width .3s ease-out;
+    &:first-of-type{
+        margin-left: 64px;
     }
-
-    .process-bar-background{
-        height: 1px;
-        background-color: rgba(255,255,255,.4);
-        width: 100%;
+    
+    &:last-of-type{
+        margin-right: 64px;
     }
 }
 
+.one-forth-slider .card-wrapper{
+    width: calc((99.99% - 104px)*.25 - 24px);
+}
+
+.one-third-slider .card-wrapper{
+    width: calc((99.99% - 104px) * .333333333333333 - 24px);
+}

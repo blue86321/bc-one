@@ -1,37 +1,47 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import topStoryImg from '../../common/images/top-story.webp'
+import topStoryImg from '../../assets/images/top-story.webp'
 import './index.css'
 
 export default class TopStory extends Component {
 
     state = {
-        topStory : {
-            title : '1234',
-            desc : '1234',
-            tag : '1234'
+        topStory : {},
+    }
+
+    getTopStory = async () => {
+        try {
+            const url = "http://localhost:5000/v3/api/graphql/v1/v3/feed/en-INT%3Een-INT/related-to/rrn:content:event-series:ae51bd1a-19d3-4050-ac35-837c734ea1bb"
+            const params = {
+                "scoring":"featured",
+                "score.featured.localeMixing":"en-INT",
+                "score.featured.subType":"featured",
+                "disableUsageRestrictions":true,
+                "rb3Schema":"v1:hubHeroContent",
+            }
+            const res = await axios.get(url, {params})
+            const {title, standfirst:desc, tag, reference:{uriSlug}} = res.data["data"]
+            const topStory = {title, desc, tag, uriSlug}
+            this.setState({topStory})
+        } catch {
+            console.log("showing test data because not opening the proxy server.")
+            this.setState({
+                topStory : {
+                    title : 'Who will battle in the Top 8 of the Red Bull BC One E-Battle 2021?',
+                    desc : 'These B-Girls and B-Boys won their Top 16 matchup in the 2021 Red Bull BC One E-Battle to advance to the Top 8 and compete in the final show.',
+                    tag : 'BREAKING',
+                    uriSlug : 'red-bull-bc-one-e-battle-2021-top-8',
+                }
+            })
         }
     }
 
     componentDidMount(){
-
-        // // ajax data, need to open the proxy server (src/common/server/server.js)
-        // const url = "http://localhost:5000/v3/api/graphql/v1/v3/feed/en-INT%3Een-INT/related-to/rrn:content:event-series:ae51bd1a-19d3-4050-ac35-837c734ea1bb"
-        // const params = {
-        //     "scoring":"featured",
-        //     "score.featured.localeMixing":"en-INT",
-        //     "score.featured.subType":"featured",
-        //     "disableUsageRestrictions":true,
-        //     "rb3Schema":"v1:hubHeroContent",
-        // }
-        // axios.get(url, {params}).then(res=>{
-        //     const {title, standfirst:desc, tag} = res.data["data"]
-        //     this.setState({topStory:{title, desc, tag}})
-        // })
+        this.getTopStory()
     }
 
     render() {
-        const {title, desc, tag} = this.state.topStory
+        const {title, desc, tag, uriSlug} = this.state.topStory
         return (
             <div className="top-story-wrapper">
                 <div className="top-story">
@@ -45,7 +55,7 @@ export default class TopStory extends Component {
                         </div>
                         <footer className="top-story-footer">
                             <div className="tag">{tag}</div>
-                            <button className="read-btn">Read Story</button>
+                            <a href={"https://www.redbull.com/int-en/"+uriSlug} className="read-btn">Read Story</a>
                         </footer>
                     </div>
                 </div>
