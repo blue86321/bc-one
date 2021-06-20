@@ -68,7 +68,7 @@ export default class Gallery extends Component {
                 <div className="gallery">
                     <CardFeed>
                         {
-                            this.state.galleries.map(gallery => <FeedCard {...gallery}/>)
+                            this.state.galleries.map(gallery => <FeedCard key={gallery.id} {...gallery}/>)
                         }
                     </CardFeed>
                 </div>
