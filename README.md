@@ -68,3 +68,6 @@ RedBull api return `imageURL` as `https://img.redbull.com/images/{op}/...`, wher
     init `react-redux` but never used in this project since there is no such scenario. May use `react-redux` when developing <b>user login module</b>.
 * **Functional Component**
     I might practice `fucntional component` in the next project.
+
+* **Responsive Design**
+    set `@media` in css/less to make webpage adjust the layout in different screen sizes.
