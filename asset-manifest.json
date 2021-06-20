@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/bcone/static/css/main.505dca61.chunk.css",
-    "main.js": "/bcone/static/js/main.b0a5dd06.chunk.js",
-    "main.js.map": "/bcone/static/js/main.b0a5dd06.chunk.js.map",
-    "runtime-main.js": "/bcone/static/js/runtime-main.f2bbc397.js",
-    "runtime-main.js.map": "/bcone/static/js/runtime-main.f2bbc397.js.map",
-    "static/js/2.9f74f080.chunk.js": "/bcone/static/js/2.9f74f080.chunk.js",
-    "static/js/2.9f74f080.chunk.js.map": "/bcone/static/js/2.9f74f080.chunk.js.map",
-    "index.html": "/bcone/index.html",
-    "static/css/main.505dca61.chunk.css.map": "/bcone/static/css/main.505dca61.chunk.css.map",
-    "static/js/2.9f74f080.chunk.js.LICENSE.txt": "/bcone/static/js/2.9f74f080.chunk.js.LICENSE.txt",
-    "static/media/calendar.a86bd989.svg": "/bcone/static/media/calendar.a86bd989.svg",
-    "static/media/event-badge-indicator.fa367972.svg": "/bcone/static/media/event-badge-indicator.fa367972.svg",
-    "static/media/headline-video.94429f81.mp4": "/bcone/static/media/headline-video.94429f81.mp4",
-    "static/media/menu.d54fb4a6.svg": "/bcone/static/media/menu.d54fb4a6.svg",
-    "static/media/red-bull-bc-one-logo-basic.76aea2d8.png": "/bcone/static/media/red-bull-bc-one-logo-basic.76aea2d8.png",
-    "static/media/redbullcom-logo.35bb21ea.svg": "/bcone/static/media/redbullcom-logo.35bb21ea.svg",
-    "static/media/search.9a363672.svg": "/bcone/static/media/search.9a363672.svg",
-    "static/media/top-story.d2f020e3.webp": "/bcone/static/media/top-story.d2f020e3.webp",
-    "static/media/user-login.f9464a2f.svg": "/bcone/static/media/user-login.f9464a2f.svg"
+    "main.css": "/bc-one/static/css/main.505dca61.chunk.css",
+    "main.js": "/bc-one/static/js/main.375bad2f.chunk.js",
+    "main.js.map": "/bc-one/static/js/main.375bad2f.chunk.js.map",
+    "runtime-main.js": "/bc-one/static/js/runtime-main.191a8fd4.js",
+    "runtime-main.js.map": "/bc-one/static/js/runtime-main.191a8fd4.js.map",
+    "static/js/2.08475be7.chunk.js": "/bc-one/static/js/2.08475be7.chunk.js",
+    "static/js/2.08475be7.chunk.js.map": "/bc-one/static/js/2.08475be7.chunk.js.map",
+    "index.html": "/bc-one/index.html",
+    "static/css/main.505dca61.chunk.css.map": "/bc-one/static/css/main.505dca61.chunk.css.map",
+    "static/js/2.08475be7.chunk.js.LICENSE.txt": "/bc-one/static/js/2.08475be7.chunk.js.LICENSE.txt",
+    "static/media/calendar.a86bd989.svg": "/bc-one/static/media/calendar.a86bd989.svg",
+    "static/media/event-badge-indicator.fa367972.svg": "/bc-one/static/media/event-badge-indicator.fa367972.svg",
+    "static/media/headline-video.94429f81.mp4": "/bc-one/static/media/headline-video.94429f81.mp4",
+    "static/media/menu.d54fb4a6.svg": "/bc-one/static/media/menu.d54fb4a6.svg",
+    "static/media/red-bull-bc-one-logo-basic.76aea2d8.png": "/bc-one/static/media/red-bull-bc-one-logo-basic.76aea2d8.png",
+    "static/media/redbullcom-logo.35bb21ea.svg": "/bc-one/static/media/redbullcom-logo.35bb21ea.svg",
+    "static/media/search.9a363672.svg": "/bc-one/static/media/search.9a363672.svg",
+    "static/media/top-story.d2f020e3.webp": "/bc-one/static/media/top-story.d2f020e3.webp",
+    "static/media/user-login.f9464a2f.svg": "/bc-one/static/media/user-login.f9464a2f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f2bbc397.js",
-    "static/js/2.9f74f080.chunk.js",
+    "static/js/runtime-main.191a8fd4.js",
+    "static/js/2.08475be7.chunk.js",
     "static/css/main.505dca61.chunk.css",
-    "static/js/main.b0a5dd06.chunk.js"
+    "static/js/main.375bad2f.chunk.js"
   ]
 }
