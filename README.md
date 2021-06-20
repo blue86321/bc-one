@@ -8,8 +8,8 @@ Chunwei's first <b>React</b> project, which clones main features of offical RedB
 To get real data:
 1. Clone the repository
 2. Start the proxy server
-    2.1. `cd {repo}/src/adapter`
-    2.2. `node proxy-server.js`
+    1. `cd {repo}/src/adapter`
+    2. `node proxy-server.js`
 3. Visit [Project Preview](https://blue86321.github.io/bc-one/)
 
 ## Introduction
